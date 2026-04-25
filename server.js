@@ -7,6 +7,7 @@ import authRoutes from './routes/authRoutes.js';
 import userRoutes from './routes/userRoutes.js';
 import recipeRoutes from './routes/recipeRoutes.js'
 import reviewRoutes from './routes/reviewRoutes.js'
+import profileRoutes from './routes/profileRoutes.js'
 
 const app = express();
 
@@ -17,6 +18,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/user', userRoutes);
 app.use('/api/recipes',recipeRoutes)
 app.use('/api/reviews', reviewRoutes);
+app.use('/api/profile', profileRoutes);
 
 app.get('/', (req, res) => {
   res.send('Recipe Management API is running...');
