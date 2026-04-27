@@ -5,7 +5,7 @@ export const submitReview = async (req, res) => {
   try {
     const userId = req.user.id;
     const { recipeId, rating, comment } = req.body;
-
+ 
     if (!recipeId) {
       return res.status(400).json({ message: 'Recipe ID is required.' });
     }
